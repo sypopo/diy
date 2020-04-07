@@ -29,12 +29,27 @@ sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
 sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/openclash.lua
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/download_game_rule.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/server_list.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/update.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/status.htm
 sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/state.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/client.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config-subscribe.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-rules-manage.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-settings.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/groups-config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/log.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/proxy-provider-config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers-config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/settings.lua
 
 ln -sf /sbin/ip /usr/bin/ip
 
