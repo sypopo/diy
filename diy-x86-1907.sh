@@ -26,6 +26,7 @@ echo '添加软件包'
 cp -f diy/sypopo/zzz-default-settings package/default-settings/files/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/sypopo/luci-app-ssr-plus.git package/sypopo/
+sed -i 's/local ucic = uci.cursor()/local ucic = luci.model.uci.cursor()/g' package/sypopo/luci-app-ssr-plus/root/usr/share/shadowsocksr/subscribe.lua
 mkdir -p package/luci-app-diskman && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
 mkdir -p package/parted && \
