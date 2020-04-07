@@ -8,7 +8,7 @@
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 #echo '修改feeds'
-#sed -i '1,2s/coolsnowwolf/hong0980/g' ./feeds.conf.default
+#sed -i '1,2s/coolsnowwolf/sypopo/g' ./feeds.conf.default
 
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
@@ -16,8 +16,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 echo '修改时区'
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
-echo '修改机器名称'
-sed -i 's/OpenWrt/OpenWrt-x64/g' package/base-files/files/bin/config_generate
+#echo '修改机器名称'
+#sed -i 's/OpenWrt/OpenWrt-x64/g' package/base-files/files/bin/config_generate
 
 echo '修改banner'
 cp -f diy/sypopo/banner package/base-files/files/etc/
