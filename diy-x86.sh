@@ -29,7 +29,6 @@ echo '删除默认密码'
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 echo '添加软件包'
-cp -f diy/sypopo/zzz-default-settings package/default-settings/files/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 
 echo '当前路径'
