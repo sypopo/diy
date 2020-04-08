@@ -7,7 +7,7 @@
 #=================================================
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-#echo '修改feeds'
+echo '修改feeds'
 sed -i '3s/Lienol/sypopo/g' ./feeds.conf.default
 
 echo '修改网关地址'
