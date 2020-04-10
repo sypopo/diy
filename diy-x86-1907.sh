@@ -25,7 +25,11 @@ cp -f diy/sypopo/banner package/base-files/files/etc/
 echo '添加软件包'
 cp -f diy/sypopo/zzz-default-settings package/default-settings/files/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
-git clone https://github.com/sypopo/luci-app-ssr-plus.git package/sypopo/
+#git clone https://github.com/sypopo/luci-app-ssr-plus.git package/sypopo/
+svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ssr-plus/  package/lean/luci-app-ssr-plus
+svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks/  package/lean/microsocks
+svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/  package/lean/redsocks2
+svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
 mkdir -p package/luci-app-diskman && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
 mkdir -p package/parted && \
