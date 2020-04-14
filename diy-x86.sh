@@ -30,6 +30,14 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 echo '添加软件包'
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
+svn checkout https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall/ package/luci-app-passwall
+svn checkout https://github.com/Lienol/openwrt-package/trunk/package/tcping/ package/tcping
+svn checkout https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng/ package/chinadns-ng
+svn checkout https://github.com/Lienol/openwrt-package/trunk/package/brook/ package/brook
+mkdir -p package/luci-app-diskman && \
+wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
+mkdir -p package/parted && \
+wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
 
 echo '当前路径'
 pwd
