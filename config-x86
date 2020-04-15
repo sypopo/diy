@@ -9,6 +9,7 @@ CONFIG_OPENSSL_WITH_COMPRESSION=y
 CONFIG_OPENSSL_WITH_DTLS=y
 CONFIG_OPENSSL_WITH_EC2M=y
 CONFIG_OPENSSL_WITH_NPN=y
+# CONFIG_PACKAGE_adbyby is not set
 # CONFIG_PACKAGE_alsa-lib is not set
 # CONFIG_PACKAGE_alsa-utils is not set
 # CONFIG_PACKAGE_amule is not set
@@ -33,6 +34,7 @@ CONFIG_PACKAGE_haproxy=y
 CONFIG_PACKAGE_hd-idle=y
 # CONFIG_PACKAGE_icu is not set
 # CONFIG_PACKAGE_iptables-mod-ipsec is not set
+CONFIG_PACKAGE_iputils-arping=y
 # CONFIG_PACKAGE_kmod-crypto-cbc is not set
 # CONFIG_PACKAGE_kmod-crypto-deflate is not set
 # CONFIG_PACKAGE_kmod-crypto-des is not set
@@ -110,15 +112,17 @@ CONFIG_PACKAGE_luci-app-openclash=y
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
 CONFIG_PACKAGE_luci-app-passwall=y
 # CONFIG_PACKAGE_luci-app-qbittorrent is not set
+CONFIG_PACKAGE_luci-app-serverchan=y
 CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-v2ray-server=y
 # CONFIG_PACKAGE_luci-app-vlmcsd is not set
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
-CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-opentomato=y
 CONFIG_PACKAGE_mdadm=y
@@ -152,7 +156,6 @@ CONFIG_PACKAGE_parted=y
 # CONFIG_PACKAGE_rblibtorrent is not set
 # CONFIG_PACKAGE_shairport-sync-openssl is not set
 CONFIG_PACKAGE_smartmontools=y
-CONFIG_PACKAGE_luci-app-serverchan=y
 # CONFIG_PACKAGE_sqlite3-cli is not set
 # CONFIG_PACKAGE_strongswan is not set
 # CONFIG_PACKAGE_strongswan-charon is not set
