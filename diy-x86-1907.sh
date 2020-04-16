@@ -21,6 +21,8 @@ sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai
 
 echo '修改banner'
 cp -f diy/sypopo/banner package/base-files/files/etc/
+date=`date +%m.%d.%Y`
+sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 cp -f diy/sypopo/zzz-default-settings package/default-settings/files/
