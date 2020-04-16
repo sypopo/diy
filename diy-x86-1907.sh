@@ -34,7 +34,7 @@ svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  packag
 svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks/  package/lean/microsocks
 svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/  package/lean/redsocks2
 svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
-svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/tcpping
+svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
 mkdir -p package/luci-app-diskman && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
 mkdir -p package/parted && \
