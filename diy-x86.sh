@@ -38,6 +38,7 @@ svn checkout https://github.com/Lienol/openwrt-package/trunk/package/tcping/ pac
 svn checkout https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng/ package/chinadns-ng
 svn checkout https://github.com/Lienol/openwrt-package/trunk/package/brook/ package/brook
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomato.git package/lean/luci-theme-opentomato
+sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
 
 echo '当前路径'
 pwd
