@@ -33,7 +33,8 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 echo '添加软件包'
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-svn checkout https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall/ package/luci-app-passwall
+svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
+svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
 svn checkout https://github.com/Lienol/openwrt-package/trunk/package/tcping/ package/tcping
 svn checkout https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng/ package/chinadns-ng
 svn checkout https://github.com/Lienol/openwrt-package/trunk/package/brook/ package/brook
