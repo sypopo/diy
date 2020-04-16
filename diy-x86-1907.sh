@@ -26,15 +26,16 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 cp -f diy/sypopo/zzz-default-settings package/default-settings/files/
-git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
+#git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
+git clone https://github.com/sypopo/helloworld.git package/helloworld
 #svn checkout https://github.com/brvphoenix/luci-app-wrtbwmon/trunk/luci-app-wrtbwmon/  package/luci-app-wrtbwmon
 #svn checkout https://github.com/brvphoenix/wrtbwmon/trunk/wrtbwmon  package/wrtbwmon
-svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks/  package/lean/microsocks
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/  package/lean/redsocks2
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
-svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
+#svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
+#svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks/  package/lean/microsocks
+#svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/  package/lean/redsocks2
+#svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
+#svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
 mkdir -p package/luci-app-diskman && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
 mkdir -p package/parted && \
