@@ -5,7 +5,6 @@
 #   Author: P3TERX
 #   Blog: https://p3terx.com
 #=================================================
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 #echo '修改feeds'
 #sed -i '1,2s/coolsnowwolf/sypopo/g' ./feeds.conf.default
@@ -27,10 +26,11 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 echo '取消bootstrap为默认主题'
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
-echo '删除默认密码'
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+#echo '删除默认密码'
+#sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 echo '添加软件包'
+cp -f diy/sypopo/Lean/zzz-default-settings package/lean/default-settings/files/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
