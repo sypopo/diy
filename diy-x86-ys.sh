@@ -26,10 +26,7 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 echo '添加软件包'
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-<<<<<<< HEAD
 git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
-=======
->>>>>>> 05aa8a89746f10acefea1a1f0ad7d6e251d3e334
 
 echo '配置aria2'
 rm -Rf files/usr/share/aria2 && git clone https://github.com/P3TERX/aria2.conf files/usr/share/aria2
@@ -46,6 +43,11 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
     uci set system.@system[0].timezone=CST-8
     uci set system.@system[0].zonename=Asia/Shanghai
     uci commit system
+
+    # set distfeeds
+    cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf_BK
+    sed -i 's#http://downloads.openwrt.org#http://mirrors.tuna.tsinghua.edu.cn/openwrt#g' /etc/opkg/distfeeds.conf
+    sed -i '/sypopo/d' /etc/opkg/distfeeds.conf
    
     # set firewall
     sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
