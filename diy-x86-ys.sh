@@ -26,37 +26,6 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 echo '添加软件包'
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-rm -Rf feeds/custom/luci/*
-cd feeds/custom/luci
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-git clone https://github.com/rufengsuixing/luci-app-adguardhome
-git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable
-svn co https://github.com/apollo-ng/luci-theme-darkmatter/branches/openwrt-19/luci/themes/luci-theme-darkmatter
-git clone https://github.com/pymumu/luci-app-smartdns -b lede
-git clone https://github.com/lisaac/luci-app-diskman
-mkdir parted && cp luci-app-diskman/Parted.Makefile parted/Makefile
-git clone https://github.com/tty228/luci-app-serverchan
-svn co https://github.com/brvphoenix/luci-app-wrtbwmon/trunk/luci-app-wrtbwmon
-svn co https://github.com/brvphoenix/wrtbwmon/trunk/wrtbwmon
-git clone https://github.com/destan19/OpenAppFilter && mv -f OpenAppFilter/* ./
-svn co https://github.com/jsda/packages2/trunk/ntlf9t/luci-app-advancedsetting
-git clone https://github.com/lisaac/luci-app-dockerman
-svn co https://github.com/coolsnowwolf/packages/trunk/sound/forked-daapd
-svn co https://github.com/openwrt/luci/trunk/applications/luci-app-sqm
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
-svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping
-git clone https://github.com/pexcn/openwrt-chinadns-ng.git chinadns-ng
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-svn co https://github.com/solidus1983/luci-theme-opentomato/branches/dev-v19.07/luci/themes/luci-theme-opentomato
-
-git clone https://github.com/garypang13/openwrt-adguardhome
-git clone https://github.com/garypang13/luci-app-php-kodexplorer
-git clone https://github.com/garypang13/luci-app-eqos
-cd -
-echo -e "\q" | svn co https://github.com/coolsnowwolf/lede/trunk/package/lean feeds/custom/luci
-cp -Rf ../diy/* ./
-./scripts/feeds update -a && ./scripts/feeds install -a
 
 echo '配置aria2'
 rm -Rf files/usr/share/aria2 && git clone https://github.com/P3TERX/aria2.conf files/usr/share/aria2
