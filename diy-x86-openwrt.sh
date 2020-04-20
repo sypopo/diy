@@ -31,14 +31,6 @@ svn co https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/
 rm -rf package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
-echo '配置aria2'
-rm -Rf files/usr/share/aria2 && git clone https://github.com/P3TERX/aria2.conf files/usr/share/aria2
-sed -i 's/#rpc-secure/rpc-secure/g' files/usr/share/aria2/aria2.conf
-sed -i 's/rpc-secret/#rpc-secret/g' files/usr/share/aria2/aria2.conf
-sed -i 's/root\/Download/data\/download\/aria2/g' files/usr/share/aria2/*
-sed -i 's/extra_setting\"/extra_settings\"/g' feeds/luci/applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua
-sed -i "s/sed '\/^$\/d' \"\$config_file_tmp\" >\"\$config_file\"/cd \/usr\/share\/aria2 \&\& sh .\/tracker.sh\n    cat \/usr\/share\/aria2\/aria2.conf > \"\$config_file\"\n\    echo '' >> \"\$config_file\"\n    sed '\/^$\/d' \"\$config_file_tmp\" >> \"\$config_file\"/g" feeds/packages/net/aria2/files/aria2.init
-
 # Define Default
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh    
