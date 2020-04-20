@@ -28,8 +28,6 @@ git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-op
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 svn co https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
-svn co https://github.com/solidus1983/luci-theme-opentomato/branches/dev-v19.07/luci/themes/luci-theme-opentomato/
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 echo '配置aria2'
 rm -Rf files/usr/share/aria2 && git clone https://github.com/P3TERX/aria2.conf files/usr/share/aria2
