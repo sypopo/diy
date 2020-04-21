@@ -71,9 +71,9 @@ uci set dhcp.@dnsmasq[0].nonwildcard=0
 uci commit dhcp
 
 #设置网络
-uci set network.wan.proto='pppoe'
-uci set network.wan.username='account'
-uci set network.wan.password='password'
+#uci set network.wan.proto='pppoe'
+#uci set network.wan.username='account'
+#uci set network.wan.password='password'
 uci set network.wan.ifname='eth3'
 uci set network.wan6.ifname='eth3'
 uci set network.lan.ipaddr='192.168.2.1'
