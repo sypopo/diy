@@ -43,6 +43,47 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
     cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf_BK
     sed -i 's#http://downloads.openwrt.org#http://mirrors.tuna.tsinghua.edu.cn/openwrt#g' /etc/opkg/distfeeds.conf
     sed -i '/sypopo/d' /etc/opkg/distfeeds.conf
+
+    # set menu
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua
+    sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/minidlna.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/transmission.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/mjpg-streamer.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua
+    sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua
+    sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
+    sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/shadowsocksr.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/checkport.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/refresh.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
+    sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/openclash.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/download_game_rule.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/server_list.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/update.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/status.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/state.htm
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/client.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config-subscribe.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-rules-manage.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-settings.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/groups-config.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/log.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/proxy-provider-config.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers-config.lua
+    sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/settings.lua
    
     # set firewall
     sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
