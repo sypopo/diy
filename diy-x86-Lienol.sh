@@ -25,7 +25,6 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 cp -f diy/sypopo/lienol/zzz-default-settings package/default-settings/files/
-cp -Rf diy/sypopo/files/aria2/* feeds/packages/net/aria2/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/sypopo/helloworld.git package/helloworld
@@ -39,6 +38,17 @@ mkdir -p package/luci-app-diskman && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
 mkdir -p package/parted && \
 wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
+
+echo '配置aria2'
+git clone https://github.com/P3TERX/aria2.conf files/usr/share/aria2 && rm -f /usr/share/aria2/*.md
+sed -i 's/#rpc-secure/rpc-secure/g' files/usr/share/aria2/aria2.conf
+sed -i 's/rpc-secret/#rpc-secret/g' files/usr/share/aria2/aria2.conf
+sed -i 's/root\/.aria2/usr\/share\/aria2/g' files/usr/share/aria2/aria2.conf
+sed -i 's/root\/Download/data\/download\/aria2/g' files/usr/share/aria2/*
+#sed -i 's/extra_setting\"/extra_settings\"/g' feeds/luci/applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua
+cp -Rf diy/sypopo/files/aria2/* feeds/packages/net/aria2/
+sed -i "s/sed '\/^$\/d' \"\$config_file_tmp\" >\"\$config_file\"/cd \/usr\/share\/aria2 \&\& sh .\/tracker.sh\ncat \/usr\/share\/aria2\/aria2.conf > \"\$config_file\"\n\
+echo '' >> \"\$config_file\"\nsed '\/^$\/d' \"\$config_file_tmp\" >> \"\$config_file\"/g" feeds/packages/net/aria2/files/aria2.init
 
 echo '当前路径'
 pwd
