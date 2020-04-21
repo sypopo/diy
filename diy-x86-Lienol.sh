@@ -25,6 +25,7 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 cp -f diy/sypopo/lienol/zzz-default-settings package/default-settings/files/
+cp -Rf diy/sypopo/files/aria2/* feeds/packages/net/aria2/
 git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/sypopo/helloworld.git package/helloworld
