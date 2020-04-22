@@ -32,7 +32,7 @@ rm -rf package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable package/lean/luci-theme-argon
 
 echo '定义默认值'
-cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
+cat > package/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 # set time zone
 uci set system.@system[0].timezone=CST-8
