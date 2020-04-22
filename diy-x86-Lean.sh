@@ -33,13 +33,15 @@ svn checkout https://github.com/sypopo/openwrt-package/trunk/package/chinadns-ng
 svn checkout https://github.com/sypopo/openwrt-package/trunk/package/brook/ package/brook
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomato.git package/lean/luci-theme-opentomato
 sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
+rm -rf package/lean/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/lean/luci-theme-argon
 
 echo '定义默认值'
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.main.mediaurlbase=/luci-static/luci-theme-opentomato
+uci set luci.main.mediaurlbase=/luci-static/luci-theme-argon
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
