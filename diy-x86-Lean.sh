@@ -41,7 +41,8 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.main.mediaurlbase=/luci-static/luci-theme-argon
+uci set luci.themes.Argon=/luci-static/argon
+uci set luci.main.mediaurlbase=/luci-static/argon
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
