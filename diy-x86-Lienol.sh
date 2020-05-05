@@ -107,8 +107,6 @@ sed -i "s/# //g" /etc/opkg/distfeeds.conf
 #uci set dhcp.lan.dhcpv6='server'
 #uci set dhcp.lan.ra_management='1'
 #uci set dhcp.lan.ra_default='1'
-#uci commit dhcp
-
 uci set dhcp.@dnsmasq[0].localservice=0
 uci set dhcp.@dnsmasq[0].nonwildcard=0
 uci commit dhcp
@@ -126,8 +124,8 @@ uci set network.lan.ifname='eth0 eth1 eth2'
 uci commit network   
 
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
-echo "iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
-echo "iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
+echo "# iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
+echo "# iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 
 sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
@@ -142,6 +140,9 @@ sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
 sed -i 's/LuCI 18-Lienol/LuCI/g' /usr/lib/lua/luci/version.lua
+
+# 删除状态页不需显示的
+mv -f /usr/lib/lua/luci/view/admin_status/index /usr/lib/lua/luci/view/admin_status/index_backup 2>/dev/null
 
 rm -rf /tmp/luci-*
 
