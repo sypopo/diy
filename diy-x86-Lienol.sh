@@ -34,10 +34,10 @@ svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/ 
 svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
 svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev/  package/lean/shadowsocksr-libev
 svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
-mkdir -p package/luci-app-diskman && \
-wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
-mkdir -p package/parted && \
-wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
+#mkdir -p package/luci-app-diskman && \
+#wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
+#mkdir -p package/parted && \
+#wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
 
 echo '定义默认值'
 cat > package/default-settings/files/zzz-default-settings <<-EOF
