@@ -43,6 +43,8 @@ echo '定义默认值'
 cat > package/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
+touch /etc/crontabs/root
+
 uci set luci.main.lang=zh_cn
 uci set luci.main.mediaurlbase=/luci-static/argon_dark_purple
 uci commit luci
