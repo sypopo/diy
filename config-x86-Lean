@@ -9,6 +9,8 @@ CONFIG_OPENSSL_WITH_COMPRESSION=y
 CONFIG_OPENSSL_WITH_DTLS=y
 CONFIG_OPENSSL_WITH_EC2M=y
 CONFIG_OPENSSL_WITH_NPN=y
+# CONFIG_PACKAGE_UnblockNeteaseMusic is not set
+# CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
 # CONFIG_PACKAGE_adbyby is not set
 # CONFIG_PACKAGE_alsa-lib is not set
 # CONFIG_PACKAGE_alsa-utils is not set
@@ -26,6 +28,7 @@ CONFIG_PACKAGE_chinadns-ng=y
 CONFIG_PACKAGE_coreutils-nohup=y
 CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_dbus is not set
+# CONFIG_PACKAGE_etherwake is not set
 # CONFIG_PACKAGE_fdk-aac is not set
 # CONFIG_PACKAGE_forked-daapd is not set
 CONFIG_PACKAGE_frpc=y
@@ -35,6 +38,7 @@ CONFIG_PACKAGE_hd-idle=y
 # CONFIG_PACKAGE_icu is not set
 # CONFIG_PACKAGE_iptables-mod-ipsec is not set
 CONFIG_PACKAGE_iputils-arping=y
+CONFIG_PACKAGE_kcptun-client=y
 # CONFIG_PACKAGE_kmod-crypto-cbc is not set
 # CONFIG_PACKAGE_kmod-crypto-deflate is not set
 # CONFIG_PACKAGE_kmod-crypto-des is not set
@@ -60,6 +64,7 @@ CONFIG_PACKAGE_libattr=y
 # CONFIG_PACKAGE_libavahi-dbus-support is not set
 # CONFIG_PACKAGE_libbfd is not set
 # CONFIG_PACKAGE_libbz2 is not set
+# CONFIG_PACKAGE_libcares is not set
 # CONFIG_PACKAGE_libconfig is not set
 # CONFIG_PACKAGE_libcryptopp is not set
 # CONFIG_PACKAGE_libdaemon is not set
@@ -74,9 +79,12 @@ CONFIG_PACKAGE_libattr=y
 # CONFIG_PACKAGE_libgmp is not set
 # CONFIG_PACKAGE_libgnutls is not set
 # CONFIG_PACKAGE_libgpg-error is not set
+# CONFIG_PACKAGE_libhttp-parser is not set
 CONFIG_PACKAGE_libltdl=y
+# CONFIG_PACKAGE_liblzma is not set
 CONFIG_PACKAGE_libmount=y
 # CONFIG_PACKAGE_libnettle is not set
+# CONFIG_PACKAGE_libnghttp2 is not set
 # CONFIG_PACKAGE_libopus is not set
 # CONFIG_PACKAGE_libpcre2-16 is not set
 # CONFIG_PACKAGE_libplist is not set
@@ -103,52 +111,54 @@ CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
-CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-frps=y
 CONFIG_PACKAGE_luci-app-hd-idle=y
 # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
 # CONFIG_PACKAGE_luci-app-music-remote-center is not set
 CONFIG_PACKAGE_luci-app-openclash=y
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
-CONFIG_PACKAGE_luci-app-passwall=y
 # CONFIG_PACKAGE_luci-app-qbittorrent is not set
 CONFIG_PACKAGE_luci-app-serverchan=y
-CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-v2ray-server=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+# CONFIG_PACKAGE_luci-app-unblockmusic is not set
 # CONFIG_PACKAGE_luci-app-vlmcsd is not set
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
+# CONFIG_PACKAGE_luci-app-wol is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-opentomato=y
 CONFIG_PACKAGE_mdadm=y
 # CONFIG_PACKAGE_mxml is not set
+# CONFIG_PACKAGE_node is not set
 # CONFIG_PACKAGE_openvpn-easy-rsa is not set
 # CONFIG_PACKAGE_openvpn-openssl is not set
 CONFIG_PACKAGE_parted=y
-# CONFIG_PACKAGE_python is not set
-# CONFIG_PACKAGE_python-base is not set
-# CONFIG_PACKAGE_python-codecs is not set
-# CONFIG_PACKAGE_python-compiler is not set
-# CONFIG_PACKAGE_python-ctypes is not set
-# CONFIG_PACKAGE_python-db is not set
-# CONFIG_PACKAGE_python-decimal is not set
-# CONFIG_PACKAGE_python-distutils is not set
-# CONFIG_PACKAGE_python-email is not set
-# CONFIG_PACKAGE_python-gdbm is not set
-# CONFIG_PACKAGE_python-light is not set
-# CONFIG_PACKAGE_python-logging is not set
-# CONFIG_PACKAGE_python-multiprocessing is not set
-# CONFIG_PACKAGE_python-ncurses is not set
-# CONFIG_PACKAGE_python-openssl is not set
-# CONFIG_PACKAGE_python-pydoc is not set
-# CONFIG_PACKAGE_python-sqlite3 is not set
-# CONFIG_PACKAGE_python-unittest is not set
-# CONFIG_PACKAGE_python-xml is not set
+# CONFIG_PACKAGE_python3 is not set
+# CONFIG_PACKAGE_python3-asyncio is not set
+# CONFIG_PACKAGE_python3-base is not set
+# CONFIG_PACKAGE_python3-cgi is not set
+# CONFIG_PACKAGE_python3-cgitb is not set
+# CONFIG_PACKAGE_python3-codecs is not set
+# CONFIG_PACKAGE_python3-ctypes is not set
+# CONFIG_PACKAGE_python3-dbm is not set
+# CONFIG_PACKAGE_python3-decimal is not set
+# CONFIG_PACKAGE_python3-distutils is not set
+# CONFIG_PACKAGE_python3-email is not set
+# CONFIG_PACKAGE_python3-gdbm is not set
+# CONFIG_PACKAGE_python3-light is not set
+# CONFIG_PACKAGE_python3-logging is not set
+# CONFIG_PACKAGE_python3-lzma is not set
+# CONFIG_PACKAGE_python3-multiprocessing is not set
+# CONFIG_PACKAGE_python3-ncurses is not set
+# CONFIG_PACKAGE_python3-openssl is not set
+# CONFIG_PACKAGE_python3-pydoc is not set
+# CONFIG_PACKAGE_python3-sqlite3 is not set
+# CONFIG_PACKAGE_python3-unittest is not set
+# CONFIG_PACKAGE_python3-urllib is not set
+# CONFIG_PACKAGE_python3-xml is not set
 # CONFIG_PACKAGE_qBittorrent is not set
 # CONFIG_PACKAGE_qt5-core is not set
 # CONFIG_PACKAGE_qt5-network is not set
@@ -182,3 +192,5 @@ CONFIG_PACKAGE_unzip=y
 # CONFIG_PACKAGE_vlmcsd is not set
 # CONFIG_PACKAGE_vsftpd-alt is not set
 CONFIG_TARGET_IMAGES_GZIP=y
+# CONFIG_UnblockNeteaseMusic_Go is not set
+# CONFIG_UnblockNeteaseMusic_NodeJS is not set
