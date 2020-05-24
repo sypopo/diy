@@ -24,7 +24,7 @@ date=`date +%m.%d.%Y`
 sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
-git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash package/luci-app-openclash
+svn checkout https://github.com/vernesong/OpenClash/branches/master/luci-app-openclash package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
 svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
