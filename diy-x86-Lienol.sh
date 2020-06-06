@@ -141,7 +141,7 @@ echo "DISTRIB_DESCRIPTION='OpenWrt '" >> /etc/openwrt_release
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
-sed -i 's/LuCI 18-Lienol/LuCI/g' /usr/lib/lua/luci/version.lua
+sed -i 's/LuCI 18.06 Lienol/LuCI 18.06 /g' /usr/lib/lua/luci/version.lua
 
 # 删除状态页不需显示的
 mv -f /usr/lib/lua/luci/view/admin_status/index /usr/lib/lua/luci/view/admin_status/index_backup 2>/dev/null
