@@ -56,49 +56,50 @@ uci commit system
 uci set fstab.@global[0].anon_mount=1
 uci commit fstab
 
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua
-sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/minidlna.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/transmission.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/mjpg-streamer.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua
-sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
-sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/shadowsocksr.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/checkport.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/refresh.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
-sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/openclash.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/download_game_rule.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/server_list.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/update.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/status.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/state.htm
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/client.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config-subscribe.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-rules-manage.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-settings.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/groups-config.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/log.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/proxy-provider-config.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers-config.lua
-sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/settings.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua
+#sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/minidlna.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/transmission.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/mjpg-streamer.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua
+#sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua
+#sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
+#sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/shadowsocksr.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/checkport.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/refresh.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
+#sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/openclash.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/download_game_rule.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/server_list.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/update.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/status.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/state.htm
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/client.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/config-subscribe.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-rules-manage.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/game-settings.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/groups-config.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/log.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/proxy-provider-config.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/servers-config.lua
+#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/openclash/settings.lua
 
 ln -sf /sbin/ip /usr/bin/ip
 
 sed -i '/lienol/d' /etc/opkg/distfeeds.conf
+sed -i '/diy1/d' /etc/opkg/distfeeds.conf
 #sed -i 's/downloads.openwrt.org/openwrt.proxy.ustclug.org/g' /etc/opkg/distfeeds.conf
 #sed -i 's/http/https/g' /etc/opkg/distfeeds.conf
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
@@ -125,9 +126,9 @@ uci set network.lan.type='bridge'
 uci set network.lan.ifname='eth0 eth1 eth2'
 uci commit network   
 
+#DNS重定向
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
 echo "# iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
-echo "# iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 
 sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
@@ -144,7 +145,17 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 sed -i 's/LuCI 17.01 Lienol/LuCI 17.01 /g' /usr/lib/lua/luci/version.lua
 
 # 删除状态页不需显示的
-mv -f /usr/lib/lua/luci/view/admin_status/index /usr/lib/lua/luci/view/admin_status/index_backup 2>/dev/null
+rm -rf /usr/lib/lua/luci/view/admin_status/index
+#mv -f /usr/lib/lua/luci/view/admin_status/index /usr/lib/lua/luci/view/admin_status/index_backup 2>/dev/null
+
+#禁用某些可能会自启动且用不上的依赖包服务
+/etc/init.d/php7-fastcgi disable 2>/dev/null
+/etc/init.d/php7-fpm disable 2>/dev/null
+/etc/init.d/softethervpnbridge disable 2>/dev/null
+/etc/init.d/softethervpnserver disable 2>/dev/null
+/etc/init.d/softethervpnclient disable 2>/dev/null
+/etc/init.d/haproxy disable 2>/dev/null
+/etc/init.d/kcptun disable 2>/dev/null
 
 rm -rf /tmp/luci-*
 
