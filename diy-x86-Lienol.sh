@@ -25,7 +25,7 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 #sed -i 's/0.32.1/0.33.0/g' package/diy/frp/Makefile
-git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
+#git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #git clone https://github.com/sypopo/helloworld.git package/helloworld
 svn checkout https://github.com/vernesong/OpenClash/branches/master/luci-app-openclash package/luci-app-openclash
 svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
