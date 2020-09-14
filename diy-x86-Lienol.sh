@@ -46,7 +46,7 @@ cat > package/default-settings/files/zzz-default-settings <<-EOF
 touch /etc/crontabs/root
 
 uci set luci.main.lang=zh_cn
-#uci set luci.main.mediaurlbase=/luci-static/argon_dark_purple
+uci set luci.main.mediaurlbase=/luci-static/argon_dark_purple
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
