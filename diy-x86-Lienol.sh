@@ -26,18 +26,8 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 echo '添加软件包'
 #sed -i 's/0.32.1/0.33.0/g' package/diy/frp/Makefile
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-#git clone https://github.com/sypopo/helloworld.git package/helloworld
-svn checkout https://github.com/vernesong/OpenClash/branches/master/luci-app-openclash package/luci-app-openclash
-svn checkout https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus  package/lean/luci-app-ssr-plus
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks/  package/lean/microsocks
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2/  package/lean/redsocks2
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/tcpping/  package/lean/tcpping
-svn checkout https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev/  package/lean/shadowsocksr-libev
-#svn checkout https://github.com/sypopo/openwrt-package/trunk/lienol/luci-app-passwall/  package/lienol/luci-app-passwall
-#mkdir -p package/luci-app-diskman && \
-#wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Makefile -O package/luci-app-diskman/Makefile
-#mkdir -p package/parted && \
-#wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
+git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone https://github.com/fw876/helloworld.git package/helloworld
 
 echo '定义默认值'
 cat > package/default-settings/files/zzz-default-settings <<-EOF
