@@ -28,7 +28,7 @@ echo '添加软件包'
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-git clone https://github.com/fw876/helloworld.git package/helloworld
+#git clone https://github.com/fw876/helloworld.git package/helloworld
 rm -rf feeds/packages/libs/libcap
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 
