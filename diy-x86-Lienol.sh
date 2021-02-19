@@ -28,8 +28,8 @@ echo '添加软件包'
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-#rm -rf feeds/packages/libs/libcap
-#svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+rm -rf feeds/packages/libs/libcap
+svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 
 echo '定义默认值'
 cat > package/default-settings/files/zzz-default-settings <<-EOF
