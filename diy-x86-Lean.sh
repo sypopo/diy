@@ -24,10 +24,8 @@ date=`date +%m.%d.%Y`
 sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
-git clone https://github.com/vernesong/OpenClash.git package/lean/luci-app-openclash
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/lean/openwrt-passwall
-git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
+git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
+git clone https://github.com/kenzok8/small.git package/small
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomato.git package/lean/luci-theme-opentomato
 sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
 rm -rf package/lean/luci-theme-argon
