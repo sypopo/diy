@@ -27,17 +27,17 @@ echo '添加软件包'
 git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
 git clone https://github.com/kenzok8/small.git package/small
 #git clone https://github.com/Leo-Jo-My/luci-theme-opentomato.git package/lean/luci-theme-opentomato
-sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
-rm -rf package/lean/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/lean/luci-theme-argon
+#sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
+#rm -rf package/lean/luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/lean/luci-theme-argon
 
 echo '定义默认值'
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.themes.Argon=/luci-static/argon
-uci set luci.main.mediaurlbase=/luci-static/argon
+uci set luci.themes.opentomato=/luci-static/opentomato
+uci set luci.main.mediaurlbase=/luci-static/opentomato
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
