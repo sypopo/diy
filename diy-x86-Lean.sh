@@ -36,7 +36,7 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.themes.opentomato=/luci-static/opentomato
+uci set luci.themes.OpenTomato=/luci-static/opentomato
 uci set luci.main.mediaurlbase=/luci-static/opentomato
 uci commit luci
 
