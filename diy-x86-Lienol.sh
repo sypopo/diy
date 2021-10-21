@@ -41,7 +41,8 @@ cat > package/default-settings/files/zzz-default-settings <<-EOF
 touch /etc/crontabs/root
 
 uci set luci.main.lang=zh_cn
-uci set luci.main.mediaurlbase=/luci-static/argon_dark_purple
+uci set luci.themes.OpenTomato=/luci-static/opentomato
+uci set luci.main.mediaurlbase=/luci-static/opentomato
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
@@ -62,17 +63,17 @@ sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua
 sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
-#sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/shadowsocksr.lua
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/checkport.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/refresh.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
-#sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
+sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/shadowsocksr.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/checkport.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/refresh.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/server_list.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/status.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/subscribe.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/shadowsocksr/check.htm
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/servers.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/client-config.lua
+sed -i 's/services/vpn/g' /usr/lib/lua/luci/model/cbi/shadowsocksr/server-config.lua
 #sed -i 's/\"services\"/\"vpn\"/g' /usr/lib/lua/luci/controller/openclash.lua
 #sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/download_game_rule.htm
 #sed -i 's/services/vpn/g' /usr/lib/lua/luci/view/openclash/server_list.htm
