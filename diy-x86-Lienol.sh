@@ -25,9 +25,9 @@ sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
 #sed -i 's/0.32.1/0.33.0/g' package/diy/frp/Makefile
-#git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
-#git clone https://github.com/kenzok8/small.git package/small
-git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
+git clone https://github.com/kenzok8/small.git package/small
+#git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
