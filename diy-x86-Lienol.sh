@@ -94,6 +94,7 @@ uci commit fstab
 ln -sf /sbin/ip /usr/bin/ip
 
 sed -i '/lienol/d' /etc/opkg/distfeeds.conf
+sed -i '/other/d' /etc/opkg/distfeeds.conf
 sed -i '/diy1/d' /etc/opkg/distfeeds.conf
 #sed -i 's/downloads.openwrt.org/openwrt.proxy.ustclug.org/g' /etc/opkg/distfeeds.conf
 #sed -i 's/http/https/g' /etc/opkg/distfeeds.conf
