@@ -135,7 +135,7 @@ wifi up
 
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
 echo "DISTRIB_DESCRIPTION='OpenWrt 19.07-SNAPSHOT'" >> /etc/openwrt_release
-sed -i 's/LuCI 17.01 Lienol/Compiled by SyPopo/g' /usr/lib/lua/luci/version.lua
+sed -i 's/LuCI 17.01 Lienol/LuCI 17.01/g' /usr/lib/lua/luci/version.lua
 
 # 删除状态页不需显示的
 rm -rf /usr/lib/lua/luci/view/admin_status/index
