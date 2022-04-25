@@ -106,8 +106,11 @@ sed -i "s/# //g" /etc/opkg/distfeeds.conf
 #uci set dhcp.lan.dhcpv6='server'
 #uci set dhcp.lan.ra_management='1'
 #uci set dhcp.lan.ra_default='1'
-uci set dhcp.@dnsmasq[0].localservice=0
-uci set dhcp.@dnsmasq[0].nonwildcard=0
+#uci set dhcp.@dnsmasq[0].localservice=0
+#uci set dhcp.@dnsmasq[0].nonwildcard=0
+uci delete dhcp.lan.ra
+uci delete dhcp.lan.dhcpv6
+uci delete dhcp.lan.ndp
 uci commit dhcp
 
 #设置网络
@@ -123,8 +126,8 @@ uci set network.lan.ifname='eth0 eth2 eth3'
 uci commit network   
 
 #DNS重定向
-sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
-echo "# iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
+#sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
+#echo "# iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 
 sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
