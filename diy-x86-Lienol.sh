@@ -133,15 +133,9 @@ sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 wifi up
 
-sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
-echo "DISTRIB_REVISION='SNAPSHOT'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
-echo "DISTRIB_DESCRIPTION='OpenWrt '" >> /etc/openwrt_release
-
-sed -i '/log-facility/d' /etc/dnsmasq.conf
-echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
-
-sed -i 's/LuCI 17.01 Lienol/LuCI SyPopo/g' /usr/lib/lua/luci/version.lua
+echo "DISTRIB_DESCRIPTION='OpenWrt 19.07-SNAPSHOT'" >> /etc/openwrt_release
+sed -i 's/LuCI 17.01 Lienol/By SyPopo/g' /usr/lib/lua/luci/version.lua
 
 # 删除状态页不需显示的
 rm -rf /usr/lib/lua/luci/view/admin_status/index
@@ -150,13 +144,17 @@ rm -rf /usr/lib/lua/luci/view/admin_status/index
 #禁用某些可能会自启动且用不上的依赖包服务
 /etc/init.d/php7-fastcgi disable 2>/dev/null
 /etc/init.d/php7-fpm disable 2>/dev/null
+/etc/init.d/php8-fastcgi disable 2>/dev/null
+/etc/init.d/php8-fpm disable 2>/dev/null
 /etc/init.d/softethervpnbridge disable 2>/dev/null
 /etc/init.d/softethervpnserver disable 2>/dev/null
 /etc/init.d/softethervpnclient disable 2>/dev/null
 /etc/init.d/haproxy disable 2>/dev/null
 /etc/init.d/kcptun disable 2>/dev/null
-
-rm -rf /tmp/luci-*
+ 
+chmod 0755 /etc/init.d/*
+ 
+rm -rf /tmp/luci-*cache
 
 exit 0
 EOF
