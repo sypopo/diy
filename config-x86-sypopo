@@ -1,0 +1,114 @@
+CONFIG_TARGET_x86=y
+CONFIG_TARGET_x86_64=y
+CONFIG_TARGET_x86_64_DEVICE_generic=y
+CONFIG_ARIA2_BITTORRENT=y
+CONFIG_ARIA2_NOXML=y
+CONFIG_ARIA2_OPENSSL=y
+CONFIG_ARIA2_WEBSOCKET=y
+CONFIG_DOCKER_CGROUP_OPTIONS=y
+CONFIG_DOCKER_NET_MACVLAN=y
+CONFIG_DOCKER_STO_EXT4=y
+CONFIG_KERNEL_CGROUP_DEVICE=y
+CONFIG_KERNEL_CGROUP_FREEZER=y
+CONFIG_KERNEL_CGROUP_NET_PRIO=y
+CONFIG_KERNEL_EXT4_FS_POSIX_ACL=y
+CONFIG_KERNEL_EXT4_FS_SECURITY=y
+CONFIG_KERNEL_FS_POSIX_ACL=y
+CONFIG_KERNEL_NET_CLS_CGROUP=y
+# CONFIG_PACKAGE_UnblockNeteaseMusic-Go is not set
+# CONFIG_PACKAGE_adbyby is not set
+CONFIG_PACKAGE_aria2=y
+CONFIG_PACKAGE_ariang=y
+CONFIG_PACKAGE_blkid=y
+CONFIG_PACKAGE_btrfs-progs=y
+CONFIG_PACKAGE_cgroupfs-mount=y
+CONFIG_PACKAGE_containerd=y
+CONFIG_PACKAGE_docker=y
+CONFIG_PACKAGE_dockerd=y
+# CONFIG_PACKAGE_etherwake is not set
+CONFIG_PACKAGE_fdisk=y
+CONFIG_PACKAGE_frpc=y
+CONFIG_PACKAGE_frps=y
+CONFIG_PACKAGE_hysteria=y
+CONFIG_PACKAGE_iputils-arping=y
+CONFIG_PACKAGE_jq=y
+CONFIG_PACKAGE_kmod-asn1-encoder=y
+CONFIG_PACKAGE_kmod-br-netfilter=y
+CONFIG_PACKAGE_kmod-crypto-ccm=y
+CONFIG_PACKAGE_kmod-crypto-cmac=y
+CONFIG_PACKAGE_kmod-crypto-ctr=y
+# CONFIG_PACKAGE_kmod-crypto-kpp is not set
+CONFIG_PACKAGE_kmod-crypto-rng=y
+CONFIG_PACKAGE_kmod-crypto-seqiv=y
+CONFIG_PACKAGE_kmod-crypto-sha256=y
+CONFIG_PACKAGE_kmod-crypto-sha512=y
+CONFIG_PACKAGE_kmod-dax=y
+CONFIG_PACKAGE_kmod-dm=y
+CONFIG_PACKAGE_kmod-dnsresolver=y
+CONFIG_PACKAGE_kmod-dummy=y
+CONFIG_PACKAGE_kmod-fs-btrfs=y
+CONFIG_PACKAGE_kmod-fs-cifs=y
+CONFIG_PACKAGE_kmod-gre=y
+CONFIG_PACKAGE_kmod-ikconfig=y
+CONFIG_PACKAGE_kmod-iptunnel=y
+CONFIG_PACKAGE_kmod-keys-encrypted=y
+CONFIG_PACKAGE_kmod-keys-trusted=y
+CONFIG_PACKAGE_kmod-lib-raid6=y
+CONFIG_PACKAGE_kmod-lib-xor=y
+CONFIG_PACKAGE_kmod-lib-zstd=y
+CONFIG_PACKAGE_kmod-nf-ipvs=y
+CONFIG_PACKAGE_kmod-oid-registry=y
+CONFIG_PACKAGE_kmod-random-core=y
+CONFIG_PACKAGE_kmod-tpm=y
+CONFIG_PACKAGE_kmod-veth=y
+# CONFIG_PACKAGE_kmod-wireguard is not set
+CONFIG_PACKAGE_libattr=y
+CONFIG_PACKAGE_libdevmapper=y
+CONFIG_PACKAGE_liblzo=y
+CONFIG_PACKAGE_libnetwork=y
+CONFIG_PACKAGE_libparted=y
+CONFIG_PACKAGE_libseccomp=y
+CONFIG_PACKAGE_lsblk=y
+# CONFIG_PACKAGE_luci-app-accesscontrol is not set
+# CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+CONFIG_PACKAGE_luci-app-aria2=y
+CONFIG_PACKAGE_luci-app-cifs-mount=y
+CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-frps=y
+CONFIG_PACKAGE_luci-app-pptp-server=y
+CONFIG_PACKAGE_luci-app-serverchan=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
+# CONFIG_PACKAGE_luci-app-unblockmusic is not set
+# CONFIG_PACKAGE_luci-app-vsftpd is not set
+# CONFIG_PACKAGE_luci-app-wireguard is not set
+# CONFIG_PACKAGE_luci-app-wol is not set
+# CONFIG_PACKAGE_luci-app-xlnetacc is not set
+CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-pptp-server-zh-cn=y
+CONFIG_PACKAGE_luci-lib-docker=y
+# CONFIG_PACKAGE_luci-proto-wireguard is not set
+CONFIG_PACKAGE_luci-theme-argonne=y
+CONFIG_PACKAGE_luci-theme-tomato=y
+CONFIG_PACKAGE_mount-utils=y
+CONFIG_PACKAGE_parted=y
+CONFIG_PACKAGE_pptpd=y
+CONFIG_PACKAGE_runc=y
+CONFIG_PACKAGE_smartmontools=y
+CONFIG_PACKAGE_tini=y
+# CONFIG_PACKAGE_vsftpd-alt is not set
+# CONFIG_PACKAGE_wireguard-tools is not set
+# CONFIG_PACKAGE_wol is not set
+CONFIG_PARTED_READLINE=y
+CONFIG_TARGET_IMAGES_GZIP=y
+CONFIG_TARGET_KERNEL_PARTSIZE=256
+CONFIG_TARGET_ROOTFS_PARTSIZE=512
+# CONFIG_VMDK_IMAGES is not set
