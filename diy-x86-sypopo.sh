@@ -101,6 +101,18 @@ sed -i 's/http:/https:/g' /etc/opkg/distfeeds.conf
 
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
 
+#设置网络
+#uci set network.wan.proto='pppoe'
+#uci set network.wan.username='account'
+#uci set network.wan.password='password'
+uci set network.wan.ifname='eth1'
+uci set network.wan6.ifname='eth1'
+uci set network.lan.ipaddr='192.168.2.1'
+uci set network.lan.proto='static'
+uci set network.lan.type='bridge'
+uci set network.lan.ifname='eth0 eth2 eth3'
+uci commit network
+
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
 echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
 echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
