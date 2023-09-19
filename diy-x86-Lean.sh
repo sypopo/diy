@@ -99,6 +99,18 @@ sed -i 's#downloads.openwrt.org#mirrors.cloud.tencent.com/lede#g' /etc/opkg/dist
 sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
+#设置网络
+#uci set network.wan.proto='pppoe'
+#uci set network.wan.username='account'
+#uci set network.wan.password='password'
+uci set network.wan.ifname='eth3'
+uci set network.wan6.ifname='eth3'
+uci set network.lan.ipaddr='192.168.5.1'
+uci set network.lan.proto='static'
+uci set network.lan.type='bridge'
+uci set network.lan.ifname='eth0 eth1 eth2'
+uci commit network
+
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
 sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.9/g; }'  /etc/opkg/distfeeds.conf
 
