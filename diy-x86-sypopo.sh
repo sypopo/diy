@@ -8,6 +8,10 @@
 
 #echo '修改feeds'
 #sed -i '1,2s/coolsnowwolf/sypopo/g' ./feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
 
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
