@@ -28,8 +28,8 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
 git clone https://github.com/kenzok8/small.git package/small
 #git clone https://github.com/Leo-Jo-My/luci-theme-opentomato.git package/lean/luci-theme-opentomato
 #sed -i "s/LeoJo/SyPopo/g" package/lean/luci-theme-opentomato/luasrc/view/themes/opentomato/footer.htm
-rm -rf ./feeds/luci/themes/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/lean/luci-theme-argon
+#rm -rf ./feeds/luci/themes/luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/lean/luci-theme-argon
 
 echo '定义默认值'
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
