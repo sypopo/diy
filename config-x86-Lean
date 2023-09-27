@@ -122,7 +122,6 @@ CONFIG_PACKAGE_luci-lib-docker=y
 CONFIG_PACKAGE_luci-lib-taskd=y
 CONFIG_PACKAGE_luci-lib-xterm=y
 # CONFIG_PACKAGE_luci-proto-wireguard is not set
-CONFIG_PACKAGE_luci-theme-tomato=y
 CONFIG_PACKAGE_mount-utils=y
 CONFIG_PACKAGE_ppp-mod-pppol2tp=y
 CONFIG_PACKAGE_pptpd=y
