@@ -8,10 +8,6 @@
 
 #echo '修改feeds'
 #sed -i '1,2s/coolsnowwolf/sypopo/g' ./feeds.conf.default
-echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
 
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
@@ -28,7 +24,9 @@ date=`date +%m.%d.%Y`
 sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
-git clone https://github.com/kenzok8/small-package package/small-package
+#git clone https://github.com/kenzok8/small-package package/small-package
+git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
+git clone https://github.com/kenzok8/small.git package/small
 
 echo '定义默认值'
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
