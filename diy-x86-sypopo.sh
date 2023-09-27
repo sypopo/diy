@@ -33,8 +33,8 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.themes.OpenTomato=/luci-static/tomato
-uci set luci.main.mediaurlbase=/luci-static/tomato
+uci set luci.themes.Argone=/luci-static/argone
+uci set luci.main.mediaurlbase=/luci-static/argone
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
@@ -93,7 +93,7 @@ sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
 ln -sf /sbin/ip /usr/bin/ip
 
 sed -i 's#downloads.openwrt.org#mirrors.cloud.tencent.com/lede#g' /etc/opkg/distfeeds.conf
-sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
+#sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 
 #设置网络
