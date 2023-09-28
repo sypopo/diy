@@ -33,8 +33,8 @@ cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
 #!/bin/sh
 
 uci set luci.main.lang=zh_cn
-uci set luci.themes.OpenTomato=/luci-static/tomato
-uci set luci.main.mediaurlbase=/luci-static/tomato
+uci set luci.themes.Argone=/luci-static/argone
+uci set luci.main.mediaurlbase=/luci-static/argone
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
