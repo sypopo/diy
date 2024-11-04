@@ -24,9 +24,10 @@ date=`date +%m.%d.%Y`
 sed -i "s/SyPopo$/SyPopo $date/g" package/base-files/files/etc/banner
 
 echo '添加软件包'
-#git clone https://github.com/kenzok8/small-package package/small-package
-git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
+git clone https://github.com/kenzok8/small-package package/small-package
+#git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
 git clone https://github.com/kenzok8/small.git package/small
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 
 echo '定义默认值'
 cat > package/lean/default-settings/files/zzz-default-settings <<-EOF
